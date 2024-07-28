@@ -1,27 +1,17 @@
 "use client";
 
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/react";
-import { PhoneIcon, PlayCircleIcon } from "@heroicons/react/20/solid";
-import {
-  ArrowPathIcon,
-  Bars3Icon,
-  ChartPieIcon,
-  CursorArrowRaysIcon,
-  FingerPrintIcon,
-  SquaresPlusIcon,
-  XMarkIcon,
-} from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
-
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-blue-950">
+    <header className="bg-blue-950 border-b border-blue-400/30">
       <nav
         aria-label="Global"
-        className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8"
+        className="mx-auto flex max-w-7xl items-center justify-between p-3 lg:px-8 "
       >
         <div className="flex lg:flex-1">
           <a href="#" className="-m-1.5 p-1.5">

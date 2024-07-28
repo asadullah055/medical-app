@@ -1,5 +1,18 @@
+import { Pill } from "lucide-react";
 import SearchBar from "./SearchBar";
-
+import TransitionalText from "./TransitionalText";
+const TEXTS = [
+  "Acupuncture",
+  "Massage",
+  "Chiropractor",
+  "Dental",
+  "Cosmetic",
+  "Dietitian",
+  "Speech Therapist",
+  "Occupational",
+  "Therapist",
+  "Acupuncturist",
+];
 const Hero = () => {
   return (
     <div className="bg-blue-950">
@@ -8,14 +21,16 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-5/12">
               <div className="hero-content">
-                <h1 className="mb-5 text-4xl font-bold !leading-[1.208] text-gray-50 dark:text-white sm:text-[42px] lg:text-[40px] xl:text-5xl">
-                <span>Book your</span> <span>Therapist</span> <span>session now</span>
+                <h1 className="mb-5 text-4xl font-bold !leading-[1.208] text-gray-50 dark:text-white sm:text-[42px] lg:text-[40px] xl:text-5xl flex flex-wrap items-center gap-3">
+                  <span>Book your</span>
+                  <TransitionalText className="text-blue-500" TEXTS={TEXTS} />
+                  <br />
+                  <span>session now</span>
                 </h1>
-                
+
                 <p className="mb-8 max-w-[480px] text-base text-gray-100 dark:text-dark-6">
-                  With TailGrids, business and students thrive together.
-                  Business can perfectly match their staffing to changing demand
-                  throughout the dayed.
+                  Your health is one of the most important things in your life.
+                  It affects your physical, mental, and emotional well-being
                 </p>
                 <SearchBar />
                 <ul className="flex flex-wrap items-center mt-6">
@@ -24,7 +39,7 @@ const Hero = () => {
                       href="/#"
                       className="inline-flex items-center justify-center rounded-md bg-blue-600 px-6 py-3 text-center text-base font-medium text-white hover:bg-blue-700 lg:px-7"
                     >
-                      Get Started
+                      Need Doctor Urgently
                     </a>
                   </li>
                   <li>
@@ -33,38 +48,28 @@ const Hero = () => {
                       className="inline-flex items-center justify-center px-5 py-3 text-center text-base font-medium text-gray-50 hover:text-blue-500 dark:text-blue-500"
                     >
                       <span className="mr-2">
-                        <svg
-                          width="24"
-                          height="25"
-                          viewBox="0 0 24 25"
-                          fill="none"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <circle cx="12" cy="12.6152" r="12" fill="#3758F9" />
-                          <rect
-                            x="7.99893"
-                            y="14.979"
-                            width="8.18182"
-                            height="1.63636"
-                            fill="white"
-                          />
-                          <rect
-                            x="11.2717"
-                            y="7.61523"
-                            width="1.63636"
-                            height="4.09091"
-                            fill="white"
-                          />
-                          <path
-                            d="M12.0898 14.1606L14.9241 11.0925H9.25557L12.0898 14.1606Z"
-                            fill="white"
-                          />
-                        </svg>
+                        <Pill className="flex-shrink-0 h-5 w-5 text-blue-600" />
                       </span>
-                      Download App
+                      Need a Refill
                     </a>
                   </li>
                 </ul>
+                <div className="py-3 flex gap-4">
+                  <div className="flex flex-col text-gray-50 items-center justify-center">
+                    <span className="font-bold">900</span>
+                    <span className="text-sm text-gray-300">
+                      Active specialist
+                    </span>
+                  </div>
+                  <div className="flex flex-col text-gray-50 items-center justify-center">
+                    <span className="font-bold">1500</span>
+                    <span className="text-sm text-gray-300">
+                      Active Patient
+                    </span>
+                  </div>
+
+                </div>
+
                 <div className="clients pt-16">
                   <h6 className="mb-6 flex items-center text-xs font-normal text-body-color dark:text-dark-6">
                     Some Of Our Clients
